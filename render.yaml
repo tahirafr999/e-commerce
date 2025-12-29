@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: ecommerce-app
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: False
+      - key: RENDER
+        value: True
+    disk:
+      name: static-files
+      mountPath: /app/staticfiles
+      sizeGB: 1
+
+# Using external Neon database instead of Render-managed database
+# databases:
+#   - name: ecommerce-db
+#     databaseName: ecommerce
+#     user: ecommerce
