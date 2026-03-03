@@ -369,8 +369,8 @@ function animateAddToCart(button) {
 
 // Utility function to format currency
 function formatCurrency(amount) {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-GB', {
         style: 'currency',
-        currency: 'USD'
+        currency: 'GBP'
     }).format(amount);
 }

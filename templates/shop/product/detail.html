@@ -30,7 +30,7 @@
         <h1 class="text-3xl font-bold text-gray-800 mb-4">{{ product.name }}</h1>
 
         <div class="mb-6">
-            <span class="text-3xl font-bold text-primary">${{ product.price }}</span>
+            <span class="text-3xl font-bold text-primary">£{{ product.price }}</span>
             {% if product.is_in_stock %}
                 <span class="ml-4 text-green-600 font-semibold">✓ In Stock ({{ product.stock }} available)</span>
             {% else %}
@@ -121,7 +121,7 @@
                 <strong>Stock Quantity:</strong> {{ product.stock }}
             </div>
             <div class="bg-gray-50 p-4 rounded">
-                <strong>Price:</strong> ${{ product.price }}
+                <strong>Price:</strong> £{{ product.price }}
             </div>
         </div>
     </div>

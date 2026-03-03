@@ -59,7 +59,7 @@
                         </h3>
                         <p class="text-gray-600 mb-3 text-sm">{{ product.description|truncatewords:15 }}</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-xl font-bold text-primary">${{ product.price }}</span>
+                            <span class="text-xl font-bold text-primary">£{{ product.price }}</span>
                             {% if product.is_in_stock %}
                                 <span class="text-green-600 text-sm">In Stock</span>
                             {% else %}
